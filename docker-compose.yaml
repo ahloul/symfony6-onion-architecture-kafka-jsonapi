@@ -1,0 +1,54 @@
+version: '3.5'
+
+services:
+  lotalty-be:
+    env_file: .env
+    build: .
+    volumes:
+      - ./code:/var/www
+    depends_on:
+      - postgresql
+    restart: unless-stopped
+
+    working_dir: /var/www
+    container_name: ${APP_CONTAINER_NAME}
+    networks:
+      - lotalty-service-app
+
+  lotalty-be-nginx:
+    env_file: .env
+    build: ./.docker/nginx
+    restart: unless-stopped
+    container_name: ${APP_NGINX_CONTAINER_NAME}
+
+    ports:
+      - "${APP_NGINX_PORT}:80"
+    volumes:
+      - ./code:/var/www
+    depends_on:
+      - lotalty-be
+    networks:
+      - lotalty-service-app
+
+  postgresql:
+    env_file: .env
+    image: 'postgres:14.1-alpine'
+    container_name: ${DB_CONTAINER_NAME}
+    restart: unless-stopped
+
+    command: '-p ${DB_PORT}'
+    ports:
+      - ${DB_PORT}:5432
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+
+    networks:
+      - lotalty-service-app
+networks:
+  lotalty-service-app:
+    name: ${LOYALTY_NETWORK_NAME}
+    external: true
