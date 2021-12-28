@@ -1,0 +1,271 @@
+{
+	"info": {
+		"_postman_id": "2bd2a7cd-06f2-4620-8a6a-992e43d6f781",
+		"name": "loyalty",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Reports",
+			"item": [
+				{
+					"name": "Purchase report",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Client",
+			"item": [
+				{
+					"name": "Purchase Voucher",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2NDA2NTE3NjEsImV4cCI6MTY0MDY1NTM2MSwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImFkbWluQGFkbWluLmNvbSJ9.S7Dr0pxxOefu11WCe-pXUNNik-KqUygeqf-JiPwJAFubJ3WyqN5DSUkpPZg6GEbzZapDUg4YUCVhVcgqScbtxfR0d5Iz3HKcwem89yXVgks9xxCL0OL4S6FzE3aEdHm2nbe87jhZ8_aPW9WqLGW7TEkXvCVo6Kyvo4llemZxxdfr1KRaQJlTVB4nDqLkdsUBv7CFdHd6bbw_ZS4uHLxoJGqpK4uzbxF4sLqoSkLx5WaadJ2h1mZPuWqEuS1fn_TpWjVPmrDT1xCty4fOvIpMLNkiYannqflggx4TCd4Pkrb7x5Vb6qSQTtT2Hnx7KYH0x78tOX3v4FGgrH25wFtu8Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8196/api/vouchers/purchase/108",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8196",
+							"path": [
+								"api",
+								"vouchers",
+								"purchase",
+								"108"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Purchase Voucher",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8196/api/vouchers/purchase/108",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8196",
+									"path": [
+										"api",
+										"vouchers",
+										"purchase",
+										"108"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.15.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.1"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Dec 2021 00:41:02 GMT"
+								},
+								{
+									"key": "X-Robots-Tag",
+									"value": "noindex"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"meta\": {\n        \"message\": \"purchase successfully\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "redeem voucher",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2NDA2NTY0MTMsImV4cCI6MTY0MDY2MDAxMywicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImFkbWluQGFkbWluLmNvbSJ9.UOP8bQ9GaFYVSUdW0xCIJhsI77p8GG0q698DR51BrQwWjPgZr0EcEHBPR6-oPpewcv8m_MfZyFEKubgSAVzN-yrkopUpcDG-YLyeoVoZp3Ik54d0U9JkFsXROPpGMqMV2LVTat1dh3pQp07VlU6MG6b_Ge5OetwueqVI2EJA9uJgOXyMKRsZOazhRfN4hc7Po-Ju7Yn1NSJFxJ6NRwXT7WfK7PvuJy6XNFDvwJG9cKn5YSQ1K8D99ZyxfXuLymuDIAyhI4BXzsfeqcdYlD2XF0x3BWUgDtoD67lR7V2TUA75nEX7P1CbBnipqacSyNwX2lLNe5G7ZSQXMVNyHmKEVg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"type\": \"vouchers\",\n        \"attributes\": {\n            \"code\": \"IBCD69LGHY\"\n        },\n        \"relationships\": {}\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8196/api/vouchers/redeem",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8196",
+							"path": [
+								"api",
+								"vouchers",
+								"redeem"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"data\": {\n    \"type\": \"user\",\n    \"attributes\": {\n      \"email\": \"admin@admin.com\",\n      \"password\": \"12345\"\n    }\n      }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8196/api/login_check",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8196",
+					"path": [
+						"api",
+						"login_check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create voucher",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2NDA2NzUxMTAsImV4cCI6MTY0MDY3ODcxMCwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImFkbWluQGFkbWluLmNvbSJ9.0NoCS7mFk_V3G4m1dtc_BdYeehg8fcLoAEUknawTfXiAUvJdpWzfu2eWTeM93qtELmdPb0XM_uiw0xfbmbHscSx4ibtiBVhdSD4USMYQ9Vnm5qzu7AoEdWJFOrs73ahV0U0_gJ-m7ikw1FoP8LZCsy36NJ879zfjX-2RLG3zkYVlmxQsjVSfJ5iuep6E6LwZKT1R0Enp8_UKiNs4zI5LN4r2wi3FZek257b_u_q3KdThj6ndJSuEXoNKsGPa9x9GZUbG_qKPzQhebiRVttgX1eQNociqcUVfLMSRzoH-xMnfgskJX4tI_OvJaLAAoBwZ_s_OkC4PZxgT3Qj-PBE4Zg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"data\": {\n    \"type\": \"vouchers\",\n    \"attributes\": {\n      \"description\": \"Unknown Type: text\",\n      \"price\": 10,\n      \"quantityInStock\": 4,\n      \"vaildFrom\": \"2021-12-26 3:19:22\",\n      \"validTo\": \"2021-12-26 23:19:22\"\n    },\n    \"relationships\": {}\n  }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8196/api/admin/vouchers/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8196",
+					"path": [
+						"api",
+						"admin",
+						"vouchers",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
