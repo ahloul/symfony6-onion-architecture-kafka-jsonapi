@@ -54,3 +54,4 @@
 .env
 postgres-data
 .idea
+/.idea
