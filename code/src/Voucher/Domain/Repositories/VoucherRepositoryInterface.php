@@ -3,6 +3,7 @@
 namespace App\Voucher\Domain\Repositories;
 
 use App\User\Domain\Entities\User;
+use App\Voucher\Domain\Entities\Redeem;
 use App\Voucher\Domain\Entities\Voucher;
 
 interface VoucherRepositoryInterface
@@ -11,7 +12,9 @@ interface VoucherRepositoryInterface
     //should not use voucher or user
 
     public function find(string $id): ?Voucher;
-    public  function findByCode(string $code): ?Voucher;
+
+    public function findByCode(string $code): ?Voucher;
+
     public function save(array $data): Voucher;
 
     public function findAll();
@@ -26,6 +29,7 @@ interface VoucherRepositoryInterface
 
     public function redeem(User $user, Voucher $voucher);
 
+    public function setPurchasedVoucherAsRedeemed(Redeem $redeem);
 
 
 }

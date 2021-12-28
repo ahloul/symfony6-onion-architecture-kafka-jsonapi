@@ -3,7 +3,7 @@ framework:
         # Uncomment this (and the failed transport below) to send failed messages to this transport for later handling.
         # failure_transport: failed
         serializer:
-            default_serializer: App\Infrastructure\Messenger\MySerializer
+            default_serializer: App\Kernal\Messenger\KafkaMessageSerializer
             symfony_serializer:
                 format: json
                 context: { }
@@ -50,4 +50,4 @@ framework:
 
         routing:
             # Route your messages to the transports
-             'App\Message\SmsNotification': producer
+             'App\Kernal\Message\KafkaMessage': producer

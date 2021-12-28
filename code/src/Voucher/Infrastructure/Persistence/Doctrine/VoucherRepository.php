@@ -143,6 +143,18 @@ class VoucherRepository implements VoucherRepositoryInterface
         return $this->voucherRepository->findOneBy(['code' => $code]);
     }
 
+    public function setPurchasedVoucherAsRedeemed(Redeem $redeem)
+    {
+     $query= $this->entityManager->createQuery(
+            'update 
+             App\Voucher\Domain\Entities\Purchase p
+             set p.redeemed =true
+            WHERE p.user = :user_id
+            and p.voucher = :voucher_id'
+        )->setParameter('user_id', $redeem->getUser()->getId())
+            ->setParameter('voucher_id', $redeem->getVoucher()->getId());
+       $query->execute();
+    }
 
 }
 

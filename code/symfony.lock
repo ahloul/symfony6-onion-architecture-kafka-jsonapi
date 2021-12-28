@@ -151,11 +151,29 @@
     "nikic/php-parser": {
         "version": "v4.13.2"
     },
+    "nyholm/psr7": {
+        "version": "1.4",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "1.0",
+            "ref": "0cd4d2d0e7f646fda75f9944f747a56e6ed13d4c"
+        },
+        "files": [
+            "config/packages/nyholm_psr7.yaml"
+        ]
+    },
+    "paknahad/jsonapi-bundle": {
+        "version": "v5.0.0"
+    },
     "phootwork/collection": {
         "version": "v3.1.0"
     },
     "phootwork/lang": {
         "version": "v3.1.0"
+    },
+    "php-http/message-factory": {
+        "version": "v1.0.2"
     },
     "phpdocumentor/reflection-common": {
         "version": "2.2.0"
@@ -189,6 +207,18 @@
     },
     "psr/log": {
         "version": "3.0.0"
+    },
+    "sensio/framework-extra-bundle": {
+        "version": "6.2",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "5.2",
+            "ref": "fb7e19da7f013d0d422fa9bce16f5c510e27609b"
+        },
+        "files": [
+            "config/packages/sensio_framework_extra.yaml"
+        ]
     },
     "symfony/asset": {
         "version": "v6.0.1"
@@ -320,6 +350,9 @@
             "config/packages/test/monolog.yaml"
         ]
     },
+    "symfony/orm-pack": {
+        "version": "v2.1.0"
+    },
     "symfony/password-hasher": {
         "version": "v6.0.1"
     },
@@ -346,6 +379,9 @@
     },
     "symfony/proxy-manager-bridge": {
         "version": "v6.0.1"
+    },
+    "symfony/psr-http-message-bridge": {
+        "version": "v2.1.2"
     },
     "symfony/routing": {
         "version": "6.0",
@@ -442,6 +478,9 @@
     },
     "webmozart/assert": {
         "version": "1.10.0"
+    },
+    "woohoolabs/yin": {
+        "version": "4.3.0"
     },
     "zenstruck/assert": {
         "version": "v1.0.0"
