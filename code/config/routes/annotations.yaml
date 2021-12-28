@@ -1,0 +1,14 @@
+#controllers:
+#    resource: ../../src/Controller/
+#    type: annotation
+voucher_clinet:
+    resource: ../../src/Voucher/UI/Api/Client/Controllers
+    type: annotation
+    prefix: /api/vouchers
+voucher_admin:
+    resource: ../../src/Voucher/UI/Api/Admin/Controllers
+    type: annotation
+    prefix: /api/admin/vouchers
+kernel:
+    resource: ../../src/Kernel.php
+    type: annotation

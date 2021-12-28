@@ -116,3 +116,8 @@
 # Embedded web-server pid file
 /.web-server-pid
 
+.idea
+
+###> lexik/jwt-authentication-bundle ###
+/config/jwt/*.pem
+###< lexik/jwt-authentication-bundle ###

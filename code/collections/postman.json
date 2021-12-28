@@ -1,0 +1,262 @@
+{
+    "info": {
+        "name": "json_api",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Voucher",
+            "description": "",
+            "item": [
+                {
+                    "name": "Voucher List",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": "",
+                        "url": {
+                            "raw": "{{host}}\/vouchers\/",
+                            "host": [
+                                "{{host}}"
+                            ],
+                            "path": [
+                                "\/vouchers",
+                                ""
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Add Voucher",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"data\": {\n        \"type\": \"vouchers\",\n        \"attributes\": {\n            \"code\": \"string\",\n            \"description\": \"text\",\n            \"price\": \"decimal\",\n            \"quantityInStock\": \"integer\",\n            \"vaildFrom\": \"datetime\",\n            \"validTo\": \"datetime\"\n        },\n        \"relationships\": []\n    }\n}"
+                        },
+                        "url": {
+                            "raw": "{{host}}\/vouchers\/",
+                            "host": [
+                                "{{host}}"
+                            ],
+                            "path": [
+                                "\/vouchers",
+                                ""
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Edit Voucher",
+                    "request": {
+                        "method": "PATCH",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"data\": {\n        \"type\": \"vouchers\",\n        \"id\": \"1\",\n        \"attributes\": {\n            \"code\": \"string\",\n            \"description\": \"text\",\n            \"price\": \"decimal\",\n            \"quantityInStock\": \"integer\",\n            \"vaildFrom\": \"datetime\",\n            \"validTo\": \"datetime\"\n        },\n        \"relationships\": []\n    }\n}"
+                        },
+                        "url": {
+                            "raw": "{{host}}\/vouchers\/1",
+                            "host": [
+                                "{{host}}"
+                            ],
+                            "path": [
+                                "\/vouchers",
+                                "1"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Delete Voucher",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": "",
+                        "url": {
+                            "raw": "{{host}}\/vouchers\/1",
+                            "host": [
+                                "{{host}}"
+                            ],
+                            "path": [
+                                "\/vouchers",
+                                "1"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get Voucher",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": "",
+                        "url": {
+                            "raw": "{{host}}\/vouchers\/1",
+                            "host": [
+                                "{{host}}"
+                            ],
+                            "path": [
+                                "\/vouchers",
+                                "1"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "User",
+            "description": "",
+            "item": [
+                {
+                    "name": "User List",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": "",
+                        "url": {
+                            "raw": "{{host}}\/users\/",
+                            "host": [
+                                "{{host}}"
+                            ],
+                            "path": [
+                                "\/users",
+                                ""
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Add User",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"data\": {\n        \"type\": \"users\",\n        \"attributes\": [],\n        \"relationships\": []\n    }\n}"
+                        },
+                        "url": {
+                            "raw": "{{host}}\/users\/",
+                            "host": [
+                                "{{host}}"
+                            ],
+                            "path": [
+                                "\/users",
+                                ""
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Edit User",
+                    "request": {
+                        "method": "PATCH",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"data\": {\n        \"type\": \"users\",\n        \"id\": \"1\",\n        \"attributes\": [],\n        \"relationships\": []\n    }\n}"
+                        },
+                        "url": {
+                            "raw": "{{host}}\/users\/1",
+                            "host": [
+                                "{{host}}"
+                            ],
+                            "path": [
+                                "\/users",
+                                "1"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Delete User",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": "",
+                        "url": {
+                            "raw": "{{host}}\/users\/1",
+                            "host": [
+                                "{{host}}"
+                            ],
+                            "path": [
+                                "\/users",
+                                "1"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get User",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": "",
+                        "url": {
+                            "raw": "{{host}}\/users\/1",
+                            "host": [
+                                "{{host}}"
+                            ],
+                            "path": [
+                                "\/users",
+                                "1"
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -48,6 +48,22 @@ services:
 
     networks:
       - lotalty-service-app
+
+  pgadmin:
+    container_name: pgadmin_container
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+
+    ports:
+      - "${PGADMIN_PORT:-5050}:80"
+    networks:
+      - lotalty-service-app
+    restart: unless-stopped
 networks:
   lotalty-service-app:
     name: ${LOYALTY_NETWORK_NAME}
